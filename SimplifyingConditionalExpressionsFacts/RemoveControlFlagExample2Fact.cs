@@ -26,6 +26,16 @@ namespace SimplifyingConditionalExpressionsFacts
         }
 
         [Fact]
+        public void should_alert_first_matched_people()
+        {
+            var peopleNames = new[] { "John", "Don" };
+
+            var usingReturn = new UsingReturn();
+            var alertMessage = usingReturn.CheckSecurity(peopleNames);
+            Assert.Equal("AlertJohn", alertMessage);
+        }
+
+        [Fact]
         public void should_not_get_alert_message_if_people_names_does_include_don_and_john()
         {
             var peopleNames = new[] { "Martin", "Kent" };

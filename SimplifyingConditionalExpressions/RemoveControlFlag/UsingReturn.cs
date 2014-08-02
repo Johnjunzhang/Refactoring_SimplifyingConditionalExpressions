@@ -11,15 +11,18 @@ namespace SimplifyingConditionalExpressions.RemoveControlFlag
             var found = "";
             foreach (var name in people)
             {
-                if (name.Equals("Don"))
+                if (found == "")
                 {
-                    SendAlert();
-                    found = "Don";
-                }
-                if (name.Equals("John"))
-                {
-                    SendAlert();
-                    found = "John";
+                    if (name.Equals("Don"))
+                    {
+                        SendAlert();
+                        found = "Don";
+                    }
+                    if (name.Equals("John"))
+                    {
+                        SendAlert();
+                        found = "John";
+                    }
                 }
             }
             return SomeLaterCode(found);

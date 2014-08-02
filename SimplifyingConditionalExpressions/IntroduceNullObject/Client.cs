@@ -3,7 +3,7 @@
     public class Client
     {
         private readonly Site site;
-
+        
         public Client(Site site)
         {
             this.site = site;
